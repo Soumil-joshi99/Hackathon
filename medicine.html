@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Portal</title>
+    <link rel="stylesheet" href="medical.css">
+</head>
+<body>
+    <header>
+        <h1>Medicine Portal</h1>
+    </header>
+    
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="announcements.html">Announcements</a>
+        <a href="your-activity.html">Your Activity</a>
+        <a href="medical.html" class="active">Medical</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Find Medicines Based on Symptoms</h2>
+        <label for="symptom">Enter Your Symptom:</label>
+        <input type="text" id="symptom" placeholder="e.g., Fever, Headache">
+        <button class="custom-button" onclick="suggestMedicine()">Get Medicine</button>
+        
+        <h3>Recommended Medicine:</h3>
+        <p id="medicine-result"></p>
+    </div>
+
+    <script>
+        function suggestMedicine() {
+            const symptom = document.getElementById("symptom").value.toLowerCase();
+            let medicine = "";
+
+            const medicineList = {
+                "fever": "Paracetamol",
+                "headache": "Ibuprofen",
+                "cold": "Antihistamines",
+                "cough": "Cough Syrup",
+                "stomach ache": "Antacids",
+                "vomiting": "Ondansetron"
+            };
+
+            medicine = medicineList[symptom] || "Consult a doctor for proper medication.";
+            document.getElementById("medicine-result").innerText = medicine;
+        }
+    </script>
+</body>
+</html>
