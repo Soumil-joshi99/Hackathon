@@ -1,0 +1,69 @@
+/* Color Palette */
+:root {
+    --dark: #0A0908;
+    --blue-gray: #22333B;
+    --light-beige: #EAE0D5;
+    --soft-brown: #C6AC8F;
+    --deep-brown: #5E503F;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    background: linear-gradient(135deg, var(--dark), var(--blue-gray));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: var(--light-beige);
+    padding: 70px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--blue-gray);
+    font-size: 32px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: var(--deep-brown);
+    font-size: 22px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--soft-brown);
+    border-radius: 5px;
+    background: var(--light-beige);
+    color: var(--dark);
+    font-size: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 18px;
+    background: var(--blue-gray);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+button:hover {
+    background: var(--deep-brown);
+}
