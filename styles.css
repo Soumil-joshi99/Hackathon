@@ -5,13 +5,14 @@
     --light-beige: #EAE0D5;
     --soft-brown: #C6AC8F;
     --deep-brown: #5E503F;
+    --warm-orange: #F4A261; /* New warm orange color for the button */
 }
 
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
     font-size: 20px;
-    background: linear-gradient(135deg, var(--dark), var(--blue-gray));
+    background: rgb(1, 1, 53);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +27,13 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 500px;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.login-container:hover {
+    transform: translateY(-10px); /* Lift the container */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    border: 3px solid var(--soft-brown); /* Add a border with a warm color */
 }
 
 h2 {
@@ -51,19 +59,33 @@ input {
     background: var(--light-beige);
     color: var(--dark);
     font-size: 20px;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: var(--soft-brown); /* Subtle focus border effect */
+    outline: none; /* Remove default outline */
 }
 
 button {
     width: 100%;
     padding: 18px;
-    background: var(--blue-gray);
+    background: var(--warm-orange); /* Warm orange color */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-bottom: 2px solid var(--warm-orange); /* Bottom border to mimic a link */
     cursor: pointer;
     font-size: 22px;
+    text-decoration: none; /* Remove default underline */
+    transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    background: var(--deep-brown);
+    color: var(--deep-brown); /* Darker brown for the text when hovered */
+    border-bottom: 2px solid var(--deep-brown); /* Change the underline to a darker shade */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+button:focus {
+    outline: none; /* Remove default focus outline */
 }
