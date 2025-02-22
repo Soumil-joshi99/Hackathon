@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Form - Hostel Management</title>
+    <link rel="stylesheet" href="hospital-form.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Admission Form</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="announcements.html">Announcements</a>
+        <a href="your-activity.html">Your Activity</a>
+        <a href="medical.html" class="active">Medical</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="form-container">
+        <h2>Fill Out Your Medical Details</h2>
+        <p>Please provide your information accurately.</p>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="college-id">College ID:</label>
+                <input type="text" id="college-id" name="college-id" required placeholder="Enter your college ID">
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Your Contact Number:</label>
+                <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required placeholder="Enter 10-digit number">
+            </div>
+
+            <div class="form-group">
+                <label for="parent-contact">Parent's Contact Number:</label>
+                <input type="tel" id="parent-contact" name="parent-contact" pattern="[0-9]{10}" required placeholder="Enter 10-digit number">
+            </div>
+
+            <div class="form-group">
+                <label for="symptoms">Describe Symptoms (if any):</label>
+                <textarea id="symptoms" name="symptoms" rows="4" placeholder="Describe your symptoms..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date of Visit:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <button type="submit" class="custom-button">Submit Form</button>
+        </form>
+    </div>
+
+    <script src="script-home.js"></script>
+</body>
+</html>
