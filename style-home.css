@@ -1,11 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #CAF0F8;
-    text-align: center;
-    transition: background 0.3s;
+body::before {
+    content: "";
+    position: absolute;
+    top: 100px; /* Move it down */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('mainpage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1; /* Ensures it stays in the background */
 }
+
 
 /* Header */
 header {
@@ -20,7 +24,7 @@ header {
 .profile-container {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 30px;
     cursor: pointer;
 }
 
@@ -32,7 +36,7 @@ header {
 }
 .container img {
     width: 500px;  /* Change width as needed */
-    height: auto;  /* Keeps aspect ratio */
+    height: 100px;  /* Keeps aspect ratio */
 }
 
 
@@ -67,17 +71,21 @@ nav a:hover {
 }
 
 /* Dropdown Menu */
+/* Dropdown Menu */
 .dropdown {
+    color: black; 
     position: absolute;
     top: 70px;
-    left: 0;
-    background: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    left: 50px;
+    background: white !important; /* Ensure a solid background */
+    border: 2px solid red; /* Temporary border for debugging */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
     text-align: left;
-    width: 250px;
-    visibility: hidden;
+    width: 300px;
+    font-size: 20px;
+    visibility: visible;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
@@ -87,6 +95,7 @@ nav a:hover {
     visibility: visible;
     opacity: 1;
 }
+
 
 /* Translucent Background Effect */
 .translucent {

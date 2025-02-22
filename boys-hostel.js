@@ -1,28 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Hostel Management System Loaded!");
+    const addComplaintBtn = document.getElementById("add-complaint-btn");
+    const complaintBox = document.getElementById("complaint-box");
+    const submitComplaintBtn = document.getElementById("submit-complaint");
+    const complaintText = document.getElementById("complaint-text");
+    const complaintList = document.getElementById("complaint-list");
 
-    const profilePic = document.getElementById("profile-pic");
-    const dropdownMenu = document.getElementById("dropdown-menu");
-    const body = document.body;
-
-    profilePic.addEventListener("click", function () {
-        // Toggle dropdown menu
-        dropdownMenu.classList.toggle("active");
-
-        // Toggle background translucency
-        if (dropdownMenu.classList.contains("active")) {
-            body.classList.add("translucent");
-        } else {
-            body.classList.remove("translucent");
-        }
+    // Show Complaint Box on Button Click
+    addComplaintBtn.addEventListener("click", function () {
+        complaintBox.style.display = "flex";
     });
 
-    // Example: Alert when a navigation link is clicked
-        });
+    // Submit Complaint
+    submitComplaintBtn.addEventListener("click", function () {
+        const complaint = complaintText.value.trim();
+        if (complaint) {
+            // Add complaint to the notice board
+            let newComplaint = document.createElement("li");
+            newComplaint.textContent = complaint;
+            complaintList.appendChild(newComplaint);
 
-        document.addEventListener("DOMContentLoaded", function () {
-            setTimeout(() => {
-                document.querySelector(".welcome-overlay").classList.add("hide-overlay");
-            }, 5000); // Hide after 5 seconds
-        });
-        
+            // Remove "No complaints yet." if it's the first complaint
+            if (complaintList.children[0].textContent === "No complaints yet.") {
+                complaintList.removeChild(complaintList.children[0]);
+            }
+
+            // Alert and reset textarea
+            alert("Your complaint has been submitted!");
+            complaintText.value = ""; 
+            complaintBox.style.display = "none"; // Hide complaint box after submission
+        } else {
+            alert("Please enter a complaint before submitting.");
+        }
+    });
+});
+function goBack() {
+    window.location.href = "home.html";
+}
