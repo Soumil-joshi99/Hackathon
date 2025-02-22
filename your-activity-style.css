@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E9ECEF;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #03045E;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #0077B6;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Content */
+.content {
+    padding: 50px;
+}
+
+/* Activity Log */
+.activity-log {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.activity-log h3 {
+    color: #03045E;
+}
+
+.activity-log ul {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-log li {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.activity-log span {
+    font-weight: bold;
+    color: #0077B6;
+}
