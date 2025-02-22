@@ -1,83 +1,91 @@
-/* General Styles */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    background-color: #f4f4f4;
     text-align: center;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Added subtle texture */
 }
 
-/* Header */
 header {
     background-color: #007bff;
     color: white;
-    padding: 20px;
+    padding: 15px 0;
     font-size: 24px;
 }
 
-/* Navigation Bar */
 nav {
-    background-color: #0056b3;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background: #333;
+    padding: 10px 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
-    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
 }
 
-nav a:hover, nav .active {
-    background-color: #004494;
+nav a:hover, .active {
+    background: #0056b3;
     border-radius: 5px;
 }
 
-/* Container */
+/* Container Styling */
 .container {
-    max-width: 800px;
-    margin: 30px auto;
-    background: white;
+    margin: 20px;
     padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Buttons */
+h2 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+/* Button Styling */
 .button-group {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
+    align-items: center;
     margin-top: 20px;
 }
 
 .custom-button {
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 12px 20px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
     width: 80%;
-    max-width: 300px;
+    transition: 0.3s;
 }
 
 .custom-button:hover {
-    background-color: #218838;
+    background-color: #0056b3;
 }
 
 /* Responsive Design */
-@media (min-width: 600px) {
-    .button-group {
-        flex-direction: row;
-        justify-content: center;
+@media (max-width: 600px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
     }
-
     .custom-button {
-        width: auto;
-        padding: 12px 30px;
+        width: 100%;
     }
 }
