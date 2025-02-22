@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls Hostel - Complaints</title>
+    <link rel="stylesheet" href="girls-hostel.css">
+</head>
+<body>
+    <header>
+        <h1>Girls Hostel Complaints</h1>
+    </header>
+
+    <div class="container">
+        <button class="go-back-btn" onclick="goBack()">⬅ Go Back</button>
+
+        <!-- Notice Board for Past Complaints -->
+        <div class="notice-board">
+            <h2>📌 Past Complaints</h2>
+            <ul id="complaint-list">
+                <li>No complaints yet.</li>
+            </ul>
+        </div>
+
+        <!-- Add Complaint Button -->
+        <button id="add-complaint-btn">➕ Add Complaint</button>
+
+        <!-- Complaint Box (Initially Hidden) -->
+        <div id="complaint-box" class="hidden">
+            <textarea id="complaint-text" placeholder="Write your complaint here..."></textarea>
+            <button id="submit-complaint">Submit</button>
+        </div>
+    </div>
+
+    <script src="girls-hostel.js"></script>
+</body>
+</html>
